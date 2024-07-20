@@ -1,0 +1,117 @@
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.card .btn-primary {
+  position: relative;
+  color: #121212;
+  background-color: aquamarine;
+}
+.btn-primary:hover, .card .btn-primary:hover {
+    background-color:mediumaquamarine;
+}
+#search_button, .btn-danger {
+    position: relative;
+}
+.btn-primary--loading::after, .btn-danger--loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3.5px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+.btn--loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3.5px solid transparent;
+    border-top-color: mediumaquamarine;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+.btn-secondary:hover {
+    color: #121212;
+}
+.navbar, .navbar .dropdown-menu, .page-link, .page-link:active, .page-link:visited {
+    color: #eee;
+    background-color: #004b4c;
+}
+.page-link:hover {
+    color: inherit;
+    background-color: darkcyan;
+}
+.page-link:disabled {
+    background-color: darkgray;
+    text-decoration:line-through;
+}
+.navbar .dropdown-item:hover {
+    color: #eee;
+    /* background-color: darkcyan; */
+    background-color: inherit;
+}
+.navbar .navbar-brand, .navbar .navbar-brand:visited {
+    color: #eee;
+    font-weight: bold;
+    text-decoration: none;
+}
+#navbarNav a {
+    color: #eee;
+}
+#navbarNav a:hover {
+    color: #eee;
+    text-decoration: underline;
+}
+.form-select {
+    max-width: fit-content;
+    color: #272727;
+    background-color: #eee;
+}
+a {
+    color:cyan;
+}
+a:hover {
+    color:lightcyan;
+}
+a:visited {
+    color:darkcyan;
+}
+a:visited[class~="btn"] {
+    color:#121212;
+}
+body, th, td {
+    color: #eee;
+    background: #121212;
+}
+.card {
+    color: #eee;
+    background: #272727;
+}
+.card-text .text-body-secondary {
+    color: inherit;
+}
+.hint {
+    font-size: smaller;
+}

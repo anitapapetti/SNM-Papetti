@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SNM | Create a new playlist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/default.css">
+</head>
+
+<body>
+   <div id="menu"></div>
+    <div class="container">
+        <div class="h-100 col-md-8 offset-md-2 align-items-center justify-content-center p-4 flex-column">
+            <h1> Create a new playlist </h1>
+            <div class="row mb-3">
+                <label for="title" class="form-label">Title (required)</label>
+                <input id="title" type="text" class="form-control" oninput="reset_entry_to_valid('title')" placeholder="Title">
+            </div>
+            <div class="row mb-3">
+                <label for="description" class="form-label">Description (required)</label>
+                <textarea id="description" class="form-control"  oninput="reset_entry_to_valid('description')" placeholder="Description" aria-label="Description"></textarea>
+            </div>
+            <div class="row mb-3">
+                <label for="tags" class="form-label">Tags (required at least one)</label>
+                <textarea id="tags" class="form-control" oninput="reset_entry_to_valid('tags')" placeholder="Tags separated by spaces..." aria-label="Tags separated by spaces"></textarea>
+            </div>
+            <div class="input-group d-flex justify-content-start">
+                <div class="m-2">
+                    <p>Visibility:</p>
+                 </div>
+                <form class="m-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="visibility" id="public" checked>
+                        <label class="form-check-label" for="public"> public </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="visibility" id="private">
+                        <label class="form-check-label" for="private"> private </label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="btn-group d-flex justify-content-center">
+                <div class="m-2">
+                    <button type="submit"  id="save_button" class="btn btn-primary btn-outline-dark" onclick="create_playlist()">Save</button>
+                </div>
+                <div id="dont-save" class="m-2">
+                    <button type="button" class="btn btn-secondary" onclick="get_page_with_url('/library')">Cancel</button>
+                </div>
+            </div>
+        </div>
+     </div>
+    </div>
+    <div class="h-100 d-flex align-items-center justify-content-center p-4 flex-column">
+        
+    </div>
+
+    <script id="bootstrap" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/utils/pages.js"></script> 
+    <script type="text/javascript" src="/utils/playlist.js"></script> 
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+# Node.js files
+node_modules/
+
+# Documentation's docx files
+docs/*.docx
